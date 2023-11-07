@@ -20,16 +20,16 @@ $(document).ready(function(){
                 speed: 300,
             });
         } else {
-            // Si el ancho es menor o igual a 700px, destruye los sliders
+           
             $('.first-row').slick('unslick');
             $('.second-row').slick('unslick');
         }
     }
 
-    // Llama a la función para inicializar los sliders cuando se carga la página
+    
     initSliders();
 
-    // Verifica el tamaño de la ventana al redimensionar y vuelve a inicializar o destruir los sliders
+    
     $(window).on('resize', function() {
         initSliders();
     });
