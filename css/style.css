@@ -634,15 +634,19 @@ p{
 /**                                                  TALLERES                                         **/
 .card{
     margin-top:5rem;
-    margin-bottom: 5rem;
+    margin-bottom: 7rem;
 }
-.card-grid{
+.card-grid {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
-    grid-template-rows: repeat(5,1fr);  
-    gap: 7.5rem;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 20px; /* Establece el espacio entre los elementos */
+  
 }
-
+.card-taller {
+    margin-right: 8px; /* Ajusta este valor para definir el margen entre los elementos */
+    /* Otros estilos */
+}
 .card-img{
     cursor: pointer;
     transition: 0.5s;
@@ -693,6 +697,94 @@ p{
     cursor: pointer;
     transform: scale(1.2);
 }
+
+
+.control-buttons {
+    display: flex;
+    justify-content: space-around;
+}
+
+.row-controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+.row-controls button {
+    margin: 5px;
+    padding: 8px 12px;
+    border: none;
+    background-color: #3498db;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.row-controls button:hover {
+    background-color: #2980b9;
+}
+.row-controls button i {
+    font-size: 24px; /* Tamaño deseado para los íconos */
+}
+
+
+/* Se utilizarán los estilos proporcionados anteriormente */
+
+.card-grid {
+    display: block; /* Importante para que Slick funcione */
+}
+
+.card-taller {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border-radius: 2rem;
+    border: 4px solid #ffff00;
+    box-shadow: 0 0 15px var(--amarillo);
+    background-color: var(--blanco);
+    margin-top: 10vh !important; /* Cambia el ancho */
+    
+    
+    /* Resto de tus estilos */
+}
+.slider-container {
+    width: 90%;
+    margin: 0 5%;
+    /* Otros estilos */
+}
+@media screen and (max-width: 700px) {
+    /* Ocultar el slider y hacer las imágenes estáticas */
+    .card-taller{
+        display: block; /* Cambia la visualización a bloque */
+    }
+
+
+
+    /* Aumentar el tamaño de las flechas del Slick Slider */
+/* Cambia ".slick-prev" y ".slick-next" según los selectores utilizados por Slick para las flechas */
+
+/* Aumenta el tamaño de las flechas */
+
+/* Ajusta cualquier otro estilo adicional */
+
+}
+/* Ajustar tamaño y color de los dots en el Slick Slider */
+.slick-dots li button {
+    font-size: 24px !important; /* Tamaño deseado para los dots */
+    
+}
+.slick-dots li button {
+    background: yellow !important; /* Cambiar color de fondo a amarillo */
+    border-color: yellow !important; /* Cambiar color del borde a amarillo */
+    border-radius: 100px;
+}
+
+
+
+
+
 /**                                                  CONTACTO                                         **/
 .contacto{
     margin-top: 5rem;
