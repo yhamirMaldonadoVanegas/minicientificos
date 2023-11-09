@@ -2,6 +2,7 @@
 const regexNombre = /^[a-zA-ZÀ-ÿ\s]{1,40}$/;
 const regexEmail = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/;
 const regexCelular = /^\d{7,14}$/;
+const regexComentario = /^[a-zA-Z0-9\s.,?!¡¿(){}[\]_-]+$/;
 
 // Función para validar el formulario
 function validarFormulario() {
@@ -13,8 +14,7 @@ function validarFormulario() {
     const esNombreValido = regexNombre.test(nombre);
     const esEmailValido = regexEmail.test(email);
     const esCelularValido = regexCelular.test(celular);
-    const esComentarioValido = false;
-    if (comentario !== "") { esComentarioValido = true }
+    const esComentarioValido = regexComentario.test(comentario);
 
     const btnEnviar = document.getElementById("btn_enviar");
 
@@ -77,7 +77,7 @@ const inputElementCel = document.getElementById("celular");
 inputElementCel.addEventListener("input", validarFormulario);
 
 const inputElementComentario = document.getElementById("comentario");
-inputElementCel.addEventListener("input", validarFormulario);
+inputElementComentario.addEventListener("input", validarFormulario);
 
 
 
