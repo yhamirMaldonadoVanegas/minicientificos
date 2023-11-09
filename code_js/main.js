@@ -2,7 +2,7 @@ const nombre = document.querySelector('#nombre');
 const email = document.querySelector('#email');
 const celular = document.querySelector('#celular');
 const comentario = document.querySelector('#comentario');
-const enviarDatos = document.querySelector('#botonEnviar');
+const enviarDatos = document.querySelector('#btnEnviarWSP');
 
 var mensaje;
 
